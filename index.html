@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: rgb(242, 235, 227);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            overflow: hidden;
+            border-radius: 13px;
+        }
+
+        .pic {
+            flex: 1;
+        }
+
+        .detail {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            /* padding: 0px 25px; */
+        }
+
+        .control {
+            padding: 25px 33px;
+        }
+
+        .desktop-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .mobile-img {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* .line{
+            padding: 0px 30px;
+        }
+        .name{
+         padding: 0px 30px;
+        }
+        .description{
+             padding: 0px 30px;
+        }
+        .price{
+            padding: 0px 30px;
+        }
+       button{
+
+       } */
+
+        .line {
+            font-size: 15px;
+            letter-spacing: 7px;
+            color: hsl(228, 12%, 48%);
+            text-transform: uppercase;
+        }
+
+        .name {
+            font-size: 37px;
+            font-weight: 900;
+            line-height: 0.9;
+            color: hsl(212, 21%, 14%);
+        }
+
+        .description {
+            letter-spacing: 1px;
+            font-size: 15px;
+            color: hsl(228, 12%, 48%);
+            line-height: 1.43;
+        }
+
+        .price {
+            font-size: 37px;
+            font-weight: 700;
+            color: hsl(158, 36%, 37%);
+        }
+
+        .old-price {
+            font-size: 15px;
+            margin-left: 15px;
+            text-decoration: line-through;
+            color: #939393;
+        }
+
+        /* Button styling */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: hsl(158, 36%, 37%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+                padding: 14px 64px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            width: fit-content;
+            gap: 10px;
+        }
+
+        .btn:hover {
+            background-color: hsl(158, 36%, 25%);
+        }
+.line, .description, .btn{
+font-family: "Montserrat", sans-serif;
+}
+         .name, .price{
+font-family: "Fraunces", serif;
+}
+
+        @media (max-width:600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .desktop-img {
+                display: none;
+            }
+
+            .mobile-img {
+                display: block;
+                /* height: 100%; */
+            }
+
+            .detail {
+                /* padding: 15px 25px; /* a bit of padding inside the card */
+                gap: 12px;
+                /* slightly more spacing for mobile */
+            }
+
+            */ .description {
+                /* force description to be at least 3 lines */
+                min-height: 60px;
+            }
+
+            .btn {
+                /* prevent button from stretching to the end */
+                width: 100%;
+                /* optional: fill width minus padding */
+                /* max-width: 200px; limit width for symmetry */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pic">
+            <img class="desktop-img" src="image-product-desktop.jpg" alt="">
+            <img class="mobile-img" src="image-product-mobile.jpg" alt="">
+        </div>
+        <div class="detail">
+            <div class="control">
+                <p class="line">PERFUME</p>
+                <h1 class="name">Gabrielle
+                    Essence Eau
+                    De Parfum</h1>
+                <p class="description">A floral, solar and voluptuous
+                    interpretation composed by
+                    Olivier Polge, Perfumer-Creator
+                    for the House of CHANEL.</p>
+                <h1 class="price">$149.99<span class="old-price">$169.99</span></h1>
+                <button class="btn"><img class="icon" src="icon-cart.svg" alt="">Add to Cart</button>
+            </div>
+            <!-- <button class="btn">Add to Cart</button> -->
+        </div>
+    </div>
+</body>
+
+</html>
